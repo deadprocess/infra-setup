@@ -1,0 +1,11 @@
+[Unit]
+Description=Reze Fetch Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/reze-fetch
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
