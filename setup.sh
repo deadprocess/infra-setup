@@ -9,7 +9,7 @@ apt-get update -y
 
 is_installed(){ dpkg -s "$1" &>/dev/null; }
 
-for pkg in "${pkgs[0]}"; do
+for pkg in "${pkgs[@]}"; do
     if is_installed "$pkg"; then
         printf "[*] %s bereits installiert\n" "$pkg"
     else
